@@ -20,6 +20,7 @@ $CFG->dboptions = array (
 $CFG->wwwroot   = getenv('WWWROOT');
 $CFG->dataroot  = getenv('DATAROOT');
 $CFG->admin     = 'admin';
+$CFG->sslproxy  = 1
 
 $CFG->directorypermissions = 0777;
 
