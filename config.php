@@ -4,23 +4,22 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('DATABASE_TYPE');
+$CFG->dbtype    = 'pgsql';
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('DATABASE_HOST');
-$CFG->dbname    = getenv('DATABASE_NAME');
-$CFG->dbuser    = getenv('DATABASE_USER');
-$CFG->dbpass    = getenv('DATABASE_PASSWORD');
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'graphite-squad';
+$CFG->dbuser    = 'zeeshan';
+$CFG->dbpass    = 'root';
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
-  'dbpersist' => 0,
-  'dbport' => getenv('DATABASE_PORT'),
-  'dbsocket' => '',
+    'dbpersist' => 0,
+    'dbport' => 5432,
+    'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('WWWROOT');
-$CFG->dataroot  = getenv('DATAROOT');
+$CFG->wwwroot   = 'http://localhost/graphite-squad';
+$CFG->dataroot  = '/var/www/graphite-squad-data';
 $CFG->admin     = 'admin';
-$CFG->sslproxy  = 1;
 
 $CFG->directorypermissions = 0777;
 
