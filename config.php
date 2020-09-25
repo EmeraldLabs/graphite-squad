@@ -23,7 +23,6 @@ $CFG->admin     = 'admin';
 $CFG->sslproxy  = 1;
 
 $CFG->directorypermissions = 0777;
-$CFG->disableupdateautodeploy = true;
 
 require_once(__DIR__ . '/lib/setup.php');
 
