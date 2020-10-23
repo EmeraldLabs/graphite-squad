@@ -74,4 +74,12 @@ $eventparams = array('context' => $PAGE->context, 'objectid' => $categoryid);
 $event = \core\event\course_category_viewed::create($eventparams);
 $event->trigger();
 
+//Add PDF Embed
+$liburl = new moodle_url('/mod/copysafepdf/jquery.min.js');
+$copyurl = new moodle_url('/mod/copysafepdf/copy.js');
+    ?>
+    <script src="<?php echo $liburl; ?>" type="text/javascript"></script>
+    <script type="text/javascript" src="<?php echo $copyurl; ?>"></script> 
+    <?php
+
 echo $OUTPUT->footer();
