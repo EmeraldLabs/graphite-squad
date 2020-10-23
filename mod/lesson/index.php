@@ -119,4 +119,12 @@ foreach ($lessons as $lesson) {
     }
 }
 echo html_writer::table($table);
+
+//Add PDF Embed
+$liburl = new moodle_url('/mod/copysafepdf/jquery.min.js');
+$copyurl = new moodle_url('/mod/copysafepdf/copy.js');
+    ?>
+    <script src="<?php echo $liburl; ?>" type="text/javascript"></script>
+    <script type="text/javascript" src="<?php echo $copyurl; ?>"></script> 
+    <?php
 echo $OUTPUT->footer();
